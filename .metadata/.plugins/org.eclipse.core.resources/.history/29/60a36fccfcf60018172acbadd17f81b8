@@ -1,0 +1,9 @@
+package org.database;
+
+import javax.ejb.Local;
+
+@Local
+public interface VehiculeComposantLocal {
+	public void ajouterVehicule();
+	public void supprimerVehicule();
+}

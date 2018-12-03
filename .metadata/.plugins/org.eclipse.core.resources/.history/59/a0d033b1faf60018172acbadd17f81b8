@@ -1,0 +1,21 @@
+package org.database;
+
+public interface Vehicule {
+	
+	protected int id;
+	protected String modele;
+	protected String marque;
+	protected String couleur;
+	protected int nombre_roues;
+	protected int nbKm;
+	protected String typeCarburant;
+	
+	public int GetId();
+	public String GetModele();
+	public String GetMarque();
+	public String GetCouleur();
+	public int GetNbRoues();
+	public int GetNbKm();
+	public String GetTypeCarburant;
+	
+}

@@ -1,0 +1,20 @@
+package org.database;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class VehiculeComposant
+ */
+@Stateless
+@LocalBean
+public class VehiculeComposant extends Vehicule implements VehiculeComposantRemote, VehiculeComposantLocal {
+
+    /**
+     * Default constructor. 
+     */
+    public VehiculeComposant() {
+        // TODO Auto-generated constructor stub
+    }
+
+}

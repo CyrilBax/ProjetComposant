@@ -1,0 +1,47 @@
+package org.database;
+
+public abstract class Vehicule {
+	
+	protected int id;
+	protected String modele;
+	protected String marque;
+	protected String couleur;
+	protected int nbRoues;
+	protected int nbKm;
+	protected String typeCarburant;
+	protected String typeVehicule;
+	
+	public int GetId()
+	{
+		return id;
+	}
+	public String GetModele()
+	{
+		return modele;
+	}
+	public String GetMarque()
+	{
+		return marque;
+	}
+	public String GetCouleur()
+	{
+		return couleur;
+	}
+	public int GetNbRoues()
+	{
+		return nbRoues;
+	}
+	public int GetNbKm()
+	{
+		return nbKm;
+	}
+	public String GetTypeCarburant()
+	{
+		return typeCarburant;
+	}
+	public String GetTypeVehicule()
+	{
+		return typeVehicule;
+	}
+	
+}

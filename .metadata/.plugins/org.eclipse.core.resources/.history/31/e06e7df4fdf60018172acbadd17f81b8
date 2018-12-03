@@ -1,0 +1,47 @@
+package org.database;
+
+import java.io.Serializable;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+/**
+ * Session Bean implementation class VehiculeComposant
+ * 
+ * Permet d'ajouter le véhicule, de le récupérer
+ */
+@Stateless
+@LocalBean
+@PersistenceContext
+public class VehiculeComposant extends Vehicule implements VehiculeComposantRemote, VehiculeComposantLocal {
+
+	private EntityManager em;
+	
+    /**
+     * Default constructor. 
+     */
+    public VehiculeComposant() 
+    {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public void ajouterVehicule(Vehicule vehicule) {
+		// TODO Auto-generated method stub
+		em.persist(vehicule);
+	}
+
+	@Override
+	public void supprimerVehicule(Vehicule vehicule) {
+		// TODO Auto-generated method stub
+		em.remove(em.merge(vehicule));
+	}
+    
+    public Vehicule trouverVehicule(Object id)
+    {
+    	return em.find(org.database.Vehicule.class, id);
+    }
+
+}
