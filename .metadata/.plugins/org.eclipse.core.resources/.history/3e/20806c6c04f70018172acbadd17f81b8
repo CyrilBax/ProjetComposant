@@ -13,7 +13,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 @LocalBean
 public class VehiculeComposant extends Vehicule implements VehiculeComposantRemote, VehiculeComposantLocal {
-	@PersistenceContext(name= "ExampleDS")
+	@PersistenceContext()
 	private EntityManager em;
 	
     /**
